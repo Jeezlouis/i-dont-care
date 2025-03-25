@@ -1,0 +1,361 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+@import url('https://cdn.syncfusion.com/ej2-base/styles/material.css');
+@import url('https://cdn.syncfusion.com/ej2-base/styles/material.css');
+@import url('https://cdn.syncfusion.com/ej2-react-lists/styles/material.css');
+@import url('https://cdn.syncfusion.com/ej2-react-circulargauge/styles/material.css');
+@import url('https://cdn.syncfusion.com/ej2-react-charts/styles/material.css');
+
+
+
+:root {
+  --light-background-color: #f0f4f8;
+  --dark-text-color: #333;
+  --primary-button-bg-color: #007bff;
+  --primary-button-text-color: #fff;
+  --primary-button-hover-bg-color: #0056b3;
+  --primary-button-hover-text-color: #fff;
+  --primary-color: #007bff;
+  --button-padding-x: 1rem;
+  --button-padding-y: 0.5rem;
+}
+.dark .e-grid {
+  --color-sf-primary: rgba(99, 102, 241);
+  --color-sf-primary-text-color: #fff;
+  --color-sf-primary-lighter: #1e1b4b;
+  --color-sf-primary-dark: #818cf8;
+  --color-sf-primary-darker: #4f46e5;
+  --color-sf-success: #22c55e;
+  --color-sf-info: #38bdf8;
+  --color-sf-warning: #f97316;
+  --color-sf-danger: #f87171;
+  --color-sf-success-light: #164c37;
+  --color-sf-info-light: #0e485b;
+  --color-sf-warning-light: #573422;
+  --color-sf-danger-light: #54252f;
+  --color-sf-success-dark: #4ade80;
+  --color-sf-info-dark: #38bdf8;
+  --color-sf-warning-dark: #fb923c;
+  --color-sf-danger-dark: #ef4444;
+}
+html.dark {
+    --bg-color: #20232A;
+    --text-color: #e2e8f0;
+  }
+  
+  html {
+    --bg-color: #FAFBFB;
+    --text-color: #1a202c;
+    
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100); /* Darker thumb for dark mode */
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none; /* Removes the default focus outline */
+  border: 2px solid #3B82F6; /* Removes border color */
+}
+select {
+  appearance: none; /* Removes default arrow */
+  background-color: white; /* Background color */
+  border: 2px solid #3B82F6; /* Blue border */
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333; /* Text color */
+  width: 100%;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%233B82F6'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E"); 
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px; /* Ensure space for the arrow */
+}
+
+/* Remove focus outline and add custom shadow */
+select:focus {
+  outline: none;
+  border-color: #2563EB; /* Darker blue on focus */
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  border-radius: 6px;
+}
+option {
+  appearance: none;
+  background-color: white;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+}
+option.dark {
+  background-color: #000;
+  background-color: #53565c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Hover effect for options */
+option:hover {
+  background-color: #3B82F6;
+  color: white;
+}
+.bg-beautify {
+    background: #f3f4f4;
+    background: linear-gradient(155deg, #f3f4f4 0%, rgba(30, 65, 206, 0.84) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bg-beautify::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Adds a subtle dark overlay */
+    backdrop-filter: blur(4px); /* Adds a blurred effect */
+    z-index: -1;
+}
+
+.container-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+/* Additional CSS for the sign-up page
+input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border-color: rgba(81, 203, 238, 1);
+} */
+
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, var(--light-background-color), #e0e7ff);
+}
+
+.code-section {
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.to-light-blue-100{
+    background-color: #e0e7ff;
+}
+/* From Uiverse.io by myselfvenky */ 
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: aqua;
+  display: grid;
+  place-items: center;
+  animation: zoomin 1.5s infinite alternate-reverse;
+  position: relative;
+ }
+ 
+ .inner {
+  background-color: #212121;
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+ }
+ 
+ @keyframes zoomin {
+  0% {
+   transform: scale(1);
+   box-shadow: 0 0 100px 20px rgb(16, 71, 71);
+  }
+ 
+  100% {
+   transform: scale(1.5);
+   box-shadow: 0 0 100px 20px #000;
+  }
+ }
+
+ /* From Uiverse.io by cosnametv */ 
+.loader {
+  --color: #a5a5b0;
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.loader span {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color);
+  animation: keyframes-blink 0.6s alternate infinite linear;
+}
+
+.loader span:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.loader span:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+.loader span:nth-child(5) {
+  animation-delay: 500ms;
+}
+
+.loader span:nth-child(6) {
+  animation-delay: 600ms;
+}
+
+@keyframes keyframes-blink {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.5) rotate(5deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.description-content {
+  position: relative;
+}
+
+.description-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Adjust the height of the gradient */
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none; /* Ensure clicks pass through to the button */
+}
+html.dark .description-content::after {
+  background: linear-gradient(to bottom, transparent, var(--bg-color));
+}
+
+.companies-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters select {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.companies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.company-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.company-card h2 {
+  margin-top: 0;
+}
+
+.custom-select {
+  appearance: none; /* Remove default styles */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.navbar {
+  position: fixed; /* Keeps it on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Adds a glass effect */
+  transition: background 0.3s ease-in-out;
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+.dark .navbar {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.e-grid .cap {
+  border: 1px solid #32db57;
+  background-color: #d2e0d6;
+  color: #32db57;
+  text-transform: capitalize;
+}
+.e-grid .capi {
+  border: 1px solid#c73b3b;
+  background-color: #ddcece;
+  color: #ce3131;
+  text-transform: capitalize;
+}
+/* Custom CSS for dark mode grid */
+.dark-grid .e-headertext,
+.dark-grid .e-rowcell {
+  color: #e5e7eb; /* Light text color for dark mode */
+}
+
+.dark-grid .e-gridheader,
+.dark-grid .e-row {
+  background-color: #1f2937; /* Dark background for headers and rows */
+}
+
+.dark-grid .e-pager,
+.dark-grid .e-toolbar {
+  background-color: #1f2937; /* Dark background for pager and toolbar */
+}
+

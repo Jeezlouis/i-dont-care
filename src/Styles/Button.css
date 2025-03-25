@@ -1,0 +1,24 @@
+/* From Uiverse.io by adamgiebl */ 
+.apply {
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: none;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+  }
+  
+  .apply:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.25em 0.25em;
+    border: 1px solid;
+  }
+  
+  .apply:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.10em 0.10em;
+    border: 1px solid;
+  }
+  
